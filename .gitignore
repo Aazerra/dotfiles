@@ -24,3 +24,11 @@ shortcutrc
 .config/java
 .config/shell/zshnameddirrc
 .config/shell/shortcutrc
+
+
+!.local/
+!.local/bin/scripts
+!.local/bin/statusbar
+
+.local/lib
+.local/share
