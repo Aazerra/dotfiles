@@ -1,0 +1,1 @@
+/home/alireza/.config/shell/profile

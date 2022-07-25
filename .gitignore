@@ -1,0 +1,26 @@
+/*/
+
+Disks
+.yarnrc
+.python_history
+shortcutrc
+
+# config
+!.config/
+.config/BraveSoftware
+.config/Code
+.config/Mongo*
+.config/beekeeper-studio
+.config/GIMP
+.config/discord
+.config/Google
+.config/android
+.config/dotfiles
+.config/pulse
+.config/nvim/plugged
+.config/nvim/autoload
+.config/nvim/shortcuts.vim
+.config/dconf
+.config/java
+.config/shell/zshnameddirrc
+.config/shell/shortcutrc

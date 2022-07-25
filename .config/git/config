@@ -1,0 +1,9 @@
+[user]
+	email = alirezarabie793@gmail.com
+	name = Alireza Rabie
+[init]
+	defaultBranch = main
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[alias]
+	graph = log --graph --oneline --decorate
