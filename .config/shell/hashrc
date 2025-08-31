@@ -1,0 +1,20 @@
+#!/bin/sh
+# Description: Shell hash aliases for convenience
+
+# Directory bookmarks
+hash -d dl=~/Downloads
+hash -d doc=~/Documents
+hash -d pics=~/Pictures
+hash -d config=~/.config
+hash -d bin=~/.local/bin
+hash -d music=~/Music
+hash -d vids=~/Videos
+hash -d work=~/Work
+hash -d proj=~/Projects
+hash -d journal=~/Documents/Journals
+hash -d data=~/.local/share
+hash -d cache=~/.cache
+hash -d sda=/mnt/data
+
+# Quick access to frequently used files
+hash -d zshrc=${ZDOTDIR:-$HOME}/.zshrc

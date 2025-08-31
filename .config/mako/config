@@ -1,0 +1,55 @@
+# Mako notification daemon configuration
+
+# Colors (OneDark palette)
+background-color=#282c34
+text-color=#abb2bf
+border-color=#528bff
+progress-color=#98c379
+
+# Styling
+font=SF Pro Display 11
+border-size=2
+border-radius=8
+margin=10
+padding=15
+
+# Behavior
+default-timeout=5000
+ignore-timeout=1
+group-by=app-name
+
+# Icons
+icons=1
+max-icon-size=48
+icon-location=left
+
+# Positioning
+anchor=top-right
+width=350
+height=100
+
+# Advanced styling
+markup=1
+actions=1
+format=<b>%s</b>\n%b
+
+# OneDark accent colors for different urgencies
+[urgency=low]
+border-color=#56b6c2
+background-color=#21252b
+
+[urgency=normal]
+border-color=#528bff
+background-color=#282c34
+
+[urgency=high]
+border-color=#e06c75
+background-color=#3e2723
+text-color=#ffffff
+
+# App-specific styling
+[app-name="Spotify"]
+border-color=#1db954
+
+[app-name="Discord"]
+border-color=#7289da

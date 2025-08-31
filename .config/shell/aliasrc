@@ -1,0 +1,43 @@
+#!/bin/sh
+# Description: Shell aliases for convenience and safety
+
+# Use sudo for these commands by default
+for command in mount umount pacman su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+# Edit a script from ~/.local/bin using fzf to choose
+se() {
+	choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf)"
+	[ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice"
+}
+
+# Quick parent directory access
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# Smart aliases with error handling
+alias cp='cp -iv' \
+    mv='mv -iv' \
+    rm='rm -vI' \
+
+alias ls='ls --color=auto --group-directories-first' \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ip="ip -color=auto" \
+    fgrep='fgrep --color=auto' \
+    egrep='egrep --color=auto'
+
+alias mkdir='mkdir -pv' # Create parent directories as needed and be verbose
+
+# Open daily journal file in Neovim
+alias td="nvim ~/Documents/Journals/Daily/$(date '+%F.md')"
+# Open a topic file in Neovim
+alias topic='nvim ~/Documents/Journals/Topics/"${1}-topic.md"'
+# Open a project notes file in Neovim
+alias project='nvim ~/Documents/Journals/Projects/"${1}-notes.md"'
+
+alias dotfiles='/usr/bin/git --git-dir="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/" --work-tree="$HOME"'

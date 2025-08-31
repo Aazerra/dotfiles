@@ -1,0 +1,162 @@
+/* OneDark Color Palette */
+@define-color bg0 #282c34;
+@define-color bg1 #353b45;
+@define-color bg2 #3e4451;
+@define-color bg3 #545862;
+@define-color fg0 #abb2bf;
+@define-color fg1 #d7dae0;
+@define-color red #e06c75;
+@define-color green #98c379;
+@define-color yellow #e5c07b;
+@define-color blue #61afef;
+@define-color purple #c678dd;
+@define-color aqua #56b6c2;
+@define-color orange #d19a66;
+
+window {
+    margin: 0px;
+    border: 2px solid @blue;
+    background-color: @bg0;
+    border-radius: 12px;
+    font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
+    font-size: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#input {
+    margin: 12px;
+    border: 2px solid @bg2;
+    background-color: @bg1;
+    color: @fg0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+#input:focus {
+    border-color: @blue;
+    background-color: @bg0;
+    color: @fg1;
+    box-shadow: 0 0 0 2px rgba(97, 175, 239, 0.2);
+}
+
+#inner-box {
+    margin: 0px 12px 12px 12px;
+    border: none;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#text {
+    margin: 0px;
+    border: none;
+    color: @fg0;
+    font-weight: 500;
+    padding: 0px 8px;
+}
+
+#entry {
+    margin: 2px 0px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: all 0.15s ease-in-out;
+}
+
+#entry:selected {
+    border-color: @blue;
+    background-color: @bg1;
+    background: linear-gradient(90deg, @bg1 0%, rgba(97, 175, 239, 0.1) 100%);
+}
+
+#entry:hover {
+    background-color: @bg2;
+    border-color: @bg3;
+}
+
+#entry:selected #text {
+    color: @fg1;
+    font-weight: 600;
+}
+
+#entry:hover #text {
+    color: @fg1;
+}
+
+/* Icon styling */
+#entry image {
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+/* Scrollbar styling */
+scrollbar {
+    background-color: @bg1;
+    border-radius: 6px;
+    margin: 4px;
+}
+
+scrollbar slider {
+    background-color: @bg3;
+    border-radius: 6px;
+    border: none;
+    min-width: 8px;
+}
+
+scrollbar slider:hover {
+    background-color: @blue;
+}
+
+/* No results message */
+#text:disabled {
+    color: @bg3;
+    font-style: italic;
+}
+
+/* Entry numbers (if enabled) */
+#entry:nth-child(1) {
+    border-left: 3px solid @red;
+}
+
+#entry:nth-child(2) {
+    border-left: 3px solid @green;
+}
+
+#entry:nth-child(3) {
+    border-left: 3px solid @yellow;
+}
+
+#entry:nth-child(4) {
+    border-left: 3px solid @blue;
+}
+
+#entry:nth-child(5) {
+    border-left: 3px solid @purple;
+}
+
+#entry:nth-child(6) {
+    border-left: 3px solid @aqua;
+}
+
+#entry:nth-child(7) {
+    border-left: 3px solid @orange;
+}
+
+/* Additional entries cycle through colors */
+#entry:nth-child(8) { border-left: 3px solid @red; }
+#entry:nth-child(9) { border-left: 3px solid @green; }
+#entry:nth-child(10) { border-left: 3px solid @yellow; }

@@ -1,0 +1,68 @@
+
+export ZDOTDIR=$HOME/.config/zsh
+
+# XDG Base Directory Specification
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XDG_CACHE_HOME="$HOME/.cache"
+
+# Preferred applications
+export EDITOR="nvim"
+export VISUAL="nvim"
+export PAGER="less"
+export BROWSER="firefox-developer-edition"
+export TERMINAL="alacritty"
+
+# Rust environment
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export MYPY_CACHE_DIR="$XDG_CACHE_HOME"/mypy
+
+# Python environment
+export PYTHONUSERBASE="$XDG_DATA_HOME/python"
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
+
+# Node.js environment
+export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
+# Docker environment
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
+# GnuPG environment
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
+# Less history
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"
+
+# Readline history
+export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
+
+# Go environment
+export GOPATH="$XDG_DATA_HOME/go"
+export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
+export GOBIN="$GOPATH/bin"
+
+export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc # GTK2
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export GTK3_RC_FILES="$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
+export GTK4_RC_FILES="$XDG_CONFIG_HOME"/gtk-4.0/settings.ini
+
+# Update PATH
+PATH="$HOME/.local/bin:$PATH"
+PATH="$PATH:$(yarn global bin)"
+
+export PATH="$GOBIN:$PATH"
+# OneDark color palette
+export LS_COLORS="di=1;34:ln=1;36:so=1;35:pi=1;33:ex=1;32:bd=1;33:cd=1;33:su=1;31:sg=1;31:tw=1;34:ow=1;34"
+
+# Start ssh-agent
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    eval "$(ssh-agent -s)" > /dev/null
+fi
+
+# Auto-start Hyprland on tty1
+if [ "$(tty)" = "/dev/tty1" ]; then
+    exec Hyprland
+fi
