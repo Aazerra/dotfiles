@@ -1,0 +1,1 @@
+/home/angel/.config/shell/profile
