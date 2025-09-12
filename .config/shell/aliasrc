@@ -41,3 +41,5 @@ alias topic='nvim ~/Documents/Journals/Topics/"${1}-topic.md"'
 alias project='nvim ~/Documents/Journals/Projects/"${1}-notes.md"'
 
 alias dotfiles='/usr/bin/git --git-dir="${XDG_DATA_HOME:-$HOME/.local/share}/dotfiles/" --work-tree="$HOME"'
+
+alias pycache-rm='find . -type d -name "__pycache__" -exec rm -r {} +'
