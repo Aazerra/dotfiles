@@ -1,0 +1,62 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Font Awesome 6 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 2em;
+}
+
+window#waybar {
+    background-color: @theme_bg_color;
+    border-bottom: 2px solid shade(alpha(@borders, 0.9), 1.25);
+    color: @theme_fg_color;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+.module {
+    padding: 0 10px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: @theme_fg_color;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button:hover {
+    background: shade(alpha(@theme_bg_color, 0.9), 1.25);
+    border-bottom: 3px solid shade(alpha(@theme_fg_color, 0.9), 1.25);
+}
+
+#workspaces button.urgent {
+    color: @theme_unfocused_text_color;
+    background: shade(alpha(@error_color, 0.7), 1.25);
+    border-bottom: 3px solid @error_color;
+}
+
+#workspaces button.active {
+    border-bottom: 3px solid @theme_fg_color;
+}
+
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
