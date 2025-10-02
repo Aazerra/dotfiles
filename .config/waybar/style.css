@@ -8,7 +8,6 @@
 
 window#waybar {
     background-color: @theme_bg_color;
-    border-bottom: 2px solid shade(alpha(@borders, 0.9), 1.25);
     color: @theme_fg_color;
     transition-property: background-color;
     transition-duration: 0.5s;
