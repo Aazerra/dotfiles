@@ -19,6 +19,7 @@ discord 1:0.0.111-1
 docker 1:28.4.0-1
 docker-buildx 0.28.0-1
 docker-compose 2.39.4-1
+dosfstools 4.2-5
 efibootmgr 18-3
 exfatprogs 1.2.9-1
 firefox-developer-edition 144.0b6-1
@@ -40,6 +41,7 @@ ldns 1.8.4-1
 lf 38-1
 libappindicator-gtk3 12.10.0.r298-4
 libnotify 0.8.7-1
+libreoffice-fresh 25.8.1-3
 linux 6.16.8.arch3-1
 linux-firmware 20250917-1
 lynx 2.9.2-2
@@ -91,6 +93,8 @@ ttf-firacode-nerd 3.4.0-1
 ttf-joypixels 9.0.0-1
 udiskie 2.5.8-1
 udisks2 2.10.2-1
+unrar 1:7.1.10-1
+unzip 6.0-23
 valkey 8.1.3-1
 vazirmatn-fonts 33.003-1
 visual-studio-code-bin 1.104.1-1
